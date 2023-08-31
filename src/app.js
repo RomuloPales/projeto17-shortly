@@ -1,11 +1,15 @@
 import db from './database/db.js';
 import expres from 'express';
 import cors from 'cors';
+import router from './routes/authRoutes.js';
 
 
 const app = expres();
 app.use(cors());
 app.use(expres.json());
+
+
+app.use(router)
 
 
 
