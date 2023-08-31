@@ -3,7 +3,7 @@ import bcrypt from "bcrypt";
 import {v4 as uuidv4} from "uuid";
 
 export async function createUser(req,res){
-    const { name, email, password } = req.body;
+    const { name, email, password, confirmPassword } = req.body;
    
     try{
         const userexists = await db.query("SELECT * FROM users WHERE email = $1", [email]);
