@@ -1,7 +1,7 @@
 import db from './database/db.js';
 import expres from 'express';
 import cors from 'cors';
-import router from './routes/authRoutes.js';
+import router from './routes/indexRoutes.js';
 
 
 const app = expres();
@@ -10,7 +10,6 @@ app.use(expres.json());
 
 
 app.use(router)
-
 
 
 const port = process.env.PORT || 4000;
