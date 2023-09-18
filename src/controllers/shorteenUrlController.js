@@ -75,7 +75,7 @@ export async function deleteShortlyUrl(req, res) {
       id,
     ]);
     res.sendStatus(204);
-  } catch (error) {
-    console.log(error);
-  }
+  }  catch (error) {
+    res.status(422).send(error.message);
+}
 }
